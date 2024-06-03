@@ -37,8 +37,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
-  ],
+    ".contentlayer/generated",
+    "prisma/**/*.ts"
+, "prisma/seed.ts"  ],
   "exclude": [
     "node_modules"
   ]
