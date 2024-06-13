@@ -13,6 +13,46 @@ export default function ChangelogPage() {
             <div className="p-4 max-w-screen-sm">
                 <Release
                     isFirst={true}
+                    version="0.2.12"
+                    date="2024-06-09"
+                    improvements={[
+                        {
+                            title: 'Add validation for the max_completion_tokens and max_prompt_tokens',
+                            description: 'In the advanced settings of your chatbot, you can now configure the max_completion_tokens and max_prompt_tokens. We added validation to prevent you from entering a value lower than 256. This will prevent the chatbot from returning an error when the value is too low.',
+                        },
+                    ]}
+                />
+                <Release
+                    version="0.2.11"
+                    date="2024-06-09"
+                    new={[
+                        {
+                            title: 'Messages Export',
+                            description: 'This feature is created for exporting messages from your chatbot. This feature will generate a JSON file with all the messages received by a chatbot.',
+                            image: new URL(
+                                '/public/exports.png',
+                                import.meta.url,
+                            ).toString()
+                        },
+                    ]}
+                />
+                <Release
+                    version="0.2.10"
+                    date="2024-06-07"
+                    new={[
+                        {
+                            title: 'Copy to clipboard feature',
+                            description: 'Now you can copy to your clipboard the chatbot response by clicking on the copy icon in the chat.',
+                        },
+                    ]}
+                    improvements={[
+                        {
+                            title: 'We added Z index on the chatbot HTML code',
+                            description: 'This will prevent the chatbot from being hidden by other elements on the page.',
+                        },
+                    ]}
+                />
+                <Release
                     version="0.2.9"
                     date="2024-06-03"
                     new={[
@@ -20,6 +60,13 @@ export default function ChangelogPage() {
                             title: 'Configure max_completion_tokens and max_prompt_tokens',
                             description: 'Now in the advanced settings of your chatbot, you can configure the max_completion_tokens and max_prompt_tokens. This will allow you to control the number of tokens used in the completion and prompt.',
                         },
+                    ]}
+                    bugs={[
+                        {
+                            title: 'Fix issue while customizing the chatbot could create infinite loading',
+                            description: 'Now we can update the chatbot customization without having an infinite loading issue.',
+                        },
+
                     ]}
                 />
                 <Release
