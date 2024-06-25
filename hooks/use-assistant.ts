@@ -185,7 +185,7 @@ export function useAssistant({
                 const lastMessage = messages[messages.length - 1];
                 lastMessage.content = lastMessage.content.replace(
                   annotation.text,
-                  annotation.file_path.url,
+                  (annotation as { file_path: { url: string } }).file_path.url,
                 );
                 return [...messages.slice(0, messages.length - 1), lastMessage];
               });

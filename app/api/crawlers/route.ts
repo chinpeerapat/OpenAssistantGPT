@@ -50,7 +50,7 @@ export async function POST(req: Request) {
 
         // Validate user subscription plan
         const { user } = session
-        const subscriptionPlan = await getUserSubscriptionPlan(user.id)
+        // const subscriptionPlan = await getUserSubscriptionPlan(user.id)
 
         const count = await db.crawler.count({
             where: {
@@ -58,9 +58,9 @@ export async function POST(req: Request) {
             },
         })
 
-        if (count >= subscriptionPlan.maxCrawlers) {
-            throw new RequiresHigherPlanError()
-        }
+        // if (count >= subscriptionPlan.maxCrawlers) {
+        //     throw new RequiresHigherPlanError()
+        // }
 
         const json = await req.json()
         const body = crawlerCreateSchema.parse(json)

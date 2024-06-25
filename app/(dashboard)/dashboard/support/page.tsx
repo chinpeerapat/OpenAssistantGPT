@@ -37,7 +37,7 @@ export default async function SupportPage() {
                 </p>
                 <div className="min-w-[85%] min-h-[15rem] text-left items-left pt-6">
                     <iframe
-                        src="/embed/clq6m06gc000114hm42s838g2/window?chatbox=false"
+                        src="/embed/clxuwsxxs000prbqf2u6g0a12/window?chatbox=false"
                         className="overflow-hidden border border-1 rounded-lg shadow-lg w-full h-[65vh]"
                         allowFullScreen allow="clipboard-read; clipboard-write"
                     ></iframe>

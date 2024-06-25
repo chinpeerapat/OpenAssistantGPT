@@ -7,11 +7,11 @@ export interface ChatComponentProps {
 }
 
 export default async function Button({ params }: ChatComponentProps) {
-  /*
-    <iframe src="http://localhost:3000/embed/clq5598dc000hrrwh5zvt6s1m/window"
-  style="overflow: hidden; height: 80vh; border: 0 none; width: 480px; bottom: -30px;" allowfullscreen
-  ></iframe>
-   */
+  
+    <iframe src="http://localhost:3000/embed/clxdvhnl3000ewhe4hi1z5s47/window"
+    style={{ overflow: 'hidden', height: '80vh', border: 'none', width: '480px', bottom: '-30px' }} allowFullScreen
+    ></iframe>
+   
 
   const chatbot = await db.chatbot.findUnique({
     where: {

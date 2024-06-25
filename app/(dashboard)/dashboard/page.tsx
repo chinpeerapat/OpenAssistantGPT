@@ -87,12 +87,12 @@ export default async function DashboardPage() {
   }
 
   // Count messages for each day
-  messages.forEach(message => {
-    const messageDate = message.createdAt.toISOString().split('T')[0];
-    const dataEntry = data.find(entry => entry.name === messageDate);
-    if (dataEntry) {
-      dataEntry.total++;
-    }
+  messages.forEach((message: { createdAt: Date }) => {
+      const messageDate = message.createdAt.toISOString().split('T')[0];
+      const dataEntry = data.find((entry: { name: string }) => entry.name === messageDate);
+      if (dataEntry) {
+          dataEntry.total++;
+      }
   });
 
   // Reverse the data array to start from the oldest date

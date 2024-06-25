@@ -16,6 +16,8 @@ type AssistantResponseSettings = {
   The ID of the latest message that the response is associated with.
    */
     messageId: string;
+
+    chatbotId: string;
 };
 
 /**

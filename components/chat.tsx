@@ -51,8 +51,8 @@ export function Chat({ chatbot, defaultMessage, className, withExitX = false, cl
     submitMessage()
 
     setFileUploaded(false)
-    if (inputFileRef) {
-
+    if (inputFileRef && inputFileRef.current) {
+    
       inputFileRef.current.value = '';
     }
   }

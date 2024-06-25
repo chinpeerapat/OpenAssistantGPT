@@ -91,7 +91,7 @@ export default async function UserInquiryPage({ params }: ChatbotSettingsProps) 
                     </>
                 </Link>
             </DashboardHeader>
-            <Inquiries inquiries={inquiriesWithMessages} />
+            <Inquiries inquiries={inquiriesWithMessages} defaultLayout={[]} />
         </DashboardShell >
     )
 }
