@@ -1,7 +1,7 @@
 {
     "functions": {
-      "app/api/chatbots/[chatbotId]/chat/route.ts": {
-        "maxDuration": 30 
+      "app/api/chatbots/[chatbotId]/chat/": {
+        "maxDuration": 60
       }
     }
   }
