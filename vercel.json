@@ -2,6 +2,12 @@
     "functions": {
       "app/api/chatbots/[chatbotId]/chat": {
         "maxDuration": 60
+      },
+      "app/api/chatbots/[chatbotId]/imported": {
+        "maxDuration": 60
+      },
+      "app/api/chatbots/[chatbotId]": {
+        "maxDuration": 60
       }
     }
   }
