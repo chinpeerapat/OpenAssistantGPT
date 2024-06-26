@@ -1,14 +1,12 @@
 import { SiteConfig } from "@/types"
 
 export const siteConfig: SiteConfig = {
-  name: "OpenAssistantGPT",
+  name: "AI Tutor",
   description:
-    "An Open-Source SaaS Platform for Crafting Chatbots with OpenAI's Assistant.",
-  url: "https://www.openassistantgpt.io/",
-  ogImage: "https://www.openassistantgpt.io/dashboard.png",
+    "A Custom - made AI chatbot ",
   links: {
-    twitter: "https://twitter.com/oassistantgpt",
-    github: "https://github.com/marcolivierbouch/OpenAssistantGPT",
-    productHunt: "https://www.producthunt.com/posts/openassistantgpt",
+    linkedin: "https://www.linkedin.com/in/akhileshrangani/",
+    github: "https://github.com/Akhileshrangani4",
+    twitter: "https://x.com/heyavi_"
   },
 }

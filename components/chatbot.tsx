@@ -83,7 +83,7 @@ export default function Chatbot() {
         } else {
             return (
                 <>
-                    <iframe
+                    {/* <iframe
                         src={`/embed/clxuwsxxs000prbqf2u6g0a12/button?chatbox=false`}
                         scrolling='no'
                         id="openassistantgpt-chatbot-button-iframe"
@@ -95,7 +95,7 @@ export default function Chatbot() {
                         allowFullScreen
                         className='z-50'
                         id="openassistantgpt-chatbot-iframe"
-                    ></iframe>
+                    ></iframe> */}
                 </>
             )
         }

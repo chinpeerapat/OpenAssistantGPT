@@ -14,7 +14,7 @@ export default async function SupportPage() {
 
     return (
         <DashboardShell>
-            <DashboardHeader heading="Support" text="Welcome to Our Support Page.">
+            <DashboardHeader heading="Support" text="Welcome to the Support Page.">
                 <Link
                     href="/dashboard"
                     className={cn(
@@ -29,19 +29,10 @@ export default async function SupportPage() {
                 </Link>
             </DashboardHeader>
             <div >
-                <p className="text-lg font-semibold">How can we help you?</p>
+                <p className="text-lg font-semibold">How can you get help?</p>
                 <p className="text-muted-foreground">
-                    First, before reaching out you can always try our chatbot. He knows a lot about our platform he might be able to help you.
-                    <br />
-                    If you still have issue with our app you can open a <a className="underline" href={siteConfig.links.github + '/issues'}>Github issue</a>, so we can help you to fix it and it will help us to improve our app.
+                    You can reach out Akhilesh on <a className="underline" href="https://www.linkedin.com/in/akhileshrangani/">Linkedin</a> or <a className="underline" href="https://x.com/heyavi_">X.com</a>, so he can help you to fix it.
                 </p>
-                <div className="min-w-[85%] min-h-[15rem] text-left items-left pt-6">
-                    <iframe
-                        src="/embed/clxuwsxxs000prbqf2u6g0a12/window?chatbox=false"
-                        className="overflow-hidden border border-1 rounded-lg shadow-lg w-full h-[65vh]"
-                        allowFullScreen allow="clipboard-read; clipboard-write"
-                    ></iframe>
-                </div>
             </div>
         </DashboardShell >
     )
