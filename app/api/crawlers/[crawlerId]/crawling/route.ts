@@ -19,7 +19,7 @@ const routeContextSchema = z.object({
     }),
 })
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 
 async function verifyCurrentUserHasAccessToCrawler(crawlerId: string) {
