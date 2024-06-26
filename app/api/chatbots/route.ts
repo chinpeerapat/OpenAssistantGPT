@@ -9,7 +9,7 @@ import { RequiresHigherPlanError } from "@/lib/exceptions";
 import { fileTypes as codeFile } from "@/lib/validations/codeInterpreter";
 import { fileTypes as searchFile } from "@/lib/validations/fileSearch";
 
-export const maxDuration = 60;
+// export const maxDuration = 60;
 
 export async function GET(request: Request) {
   try {

@@ -26,7 +26,6 @@ interface ChatbotSettingsProps {
 }
 
 
-export const maxDuration = 60;
 export default async function ChatbotPage({ params }: ChatbotSettingsProps) {
 
     const user = await getCurrentUser()
