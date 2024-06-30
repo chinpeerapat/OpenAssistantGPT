@@ -1,11 +1,11 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
 datasource db {
   provider  = "postgresql"
   url       = env("POSTGRES_PRISMA_URL")
   directUrl = env("POSTGRES_URL_NON_POOLING")
-}
-
-generator client {
-  provider = "prisma-client-js"
 }
 
 model OpenAIConfig {
@@ -62,8 +62,9 @@ model Chatbot {
   chatbotErrorMessage String        @default("Oops! An error has occurred. If the issue persists, feel free to reach out to our support team for assistance. We're here to help!")
   isImported          Boolean       @default(false)
 
-  chatTitle              String @default("Chat with us")
-  chatMessagePlaceHolder String @default("Type a message...")
+  chatTitle              String  @default("Chat with us")
+  chatMessagePlaceHolder String  @default("Type a message...")
+  rightToLeftLanguage    Boolean @default(false)
 
   bubbleColor                 String  @default("#FFFFFF")
   bubbleTextColor             String  @default("#000000")
@@ -74,6 +75,8 @@ model Chatbot {
   userReplyBackgroundColor    String  @default("#e4e4e7")
   userReplyTextColor          String  @default("#000000")
   chatbotLogoURL              String?
+
+  chatInputStyle String @default("default")
 
   inquiryEnabled                  Boolean @default(false)
   inquiryLinkText                 String  @default("Contact our support team")

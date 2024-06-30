@@ -109,7 +109,7 @@ export function NotificationSettingsForm({ user, inquiryNotificationEnabled, mar
                                 </FormItem>
                             )}
                         />
-                        <FormField
+                        {/* <FormField
                             control={form.control}
                             name="marketingEmailEnabled"
                             render={({ field }) => (
@@ -129,7 +129,7 @@ export function NotificationSettingsForm({ user, inquiryNotificationEnabled, mar
                                     <FormMessage />
                                 </FormItem>
                             )}
-                        />
+                        /> */}
                     </CardContent>
                     <CardFooter>
                         <button
