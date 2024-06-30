@@ -113,7 +113,7 @@ export default async function ChatbotPage({ params }: ChatbotSettingsProps) {
                     <TabsTrigger value="advancedSettings">Advanced Settings</TabsTrigger>
                     <TabsTrigger value="customizations">Customizations</TabsTrigger>
                     <TabsTrigger value="inquiry">User Inquiry Settings</TabsTrigger>
-                    <TabsTrigger value="pro">Pro features 👑</TabsTrigger>
+                    <TabsTrigger value="pro">Additional features</TabsTrigger>
                 </TabsList>
                 <TabsContent value="settings">
                     <div className="space-y-4">

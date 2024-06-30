@@ -50,15 +50,15 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
                 <DropdownMenuItem asChild>
                     <Link href="/dashboard/files">Files</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                     <Link href="/dashboard/billing">Billing</Link>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuItem asChild>
                     <Link href="/dashboard/settings">Settings</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                     <Link href="/dashboard/onboarding">Onboarding</Link>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
                     className="cursor-pointer"

@@ -14,8 +14,8 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
             )}
             {...props}
         >
-            Powered by{' '}
-            <ExternalLink href={siteConfig.url}>OpenAssistantGPT</ExternalLink>
+            Made for{' '}
+            <ExternalLink href="https://ajoubin.org/">Alexa Alice Joubin</ExternalLink>
         </p>
     )
 }

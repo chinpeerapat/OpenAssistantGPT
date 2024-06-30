@@ -93,7 +93,7 @@ export function ChatbotBrandingProSettingsForm({ chatbot, className, ...props }:
             >
                 <Card>
                     <CardHeader>
-                        <CardTitle>Chatbot Branding label</CardTitle>
+                        <CardTitle>AI Tutor Branding label</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6">
                         <FormField
@@ -103,10 +103,10 @@ export function ChatbotBrandingProSettingsForm({ chatbot, className, ...props }:
                                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
                                     <div className="space-y-0.5">
                                         <FormLabel className="text-base">
-                                            OpenAssistantGPT Branding Label
+                                            AI Tutor Branding Label
                                         </FormLabel>
                                         <FormDescription>
-                                            Remove &quot;Powered by OpenAssistantGPT&quot; from the chatbot.
+                                            Remove &quot;Made for Alexa Alice Joubin&quot; from the chatbot.
                                         </FormDescription>
                                     </div>
                                     <FormControl>

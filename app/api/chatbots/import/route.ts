@@ -7,7 +7,7 @@ import { getUserSubscriptionPlan } from "@/lib/subscription";
 import { RequiresHigherPlanError } from "@/lib/exceptions";
 import { importChatbotSchema } from "@/lib/validations/importChatbot";
 
-// export const maxDuration = 60;
+export const maxDuration = 60;
 
 export async function POST(req: Request) {
     try {

@@ -2,11 +2,12 @@ import { SiteConfig } from "@/types"
 
 export const siteConfig: SiteConfig = {
   name: "AI Tutor",
-  description:
-    "A Custom - made AI chatbot ",
+  description: "A Custom - made AI chatbot ",
   links: {
     linkedin: "https://www.linkedin.com/in/akhileshrangani/",
     github: "https://github.com/Akhileshrangani4",
-    twitter: "https://x.com/heyavi_"
+    twitter: "https://x.com/heyavi_",
+    url: "https://filmtheory.info/"
   },
+  url: "https://filmtheory.info/"
 }

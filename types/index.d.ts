@@ -52,12 +52,14 @@ export type DocsConfig = {
 }
 
 export type SiteConfig = {
+  url: any
   name: string
   description: string
   links: {
     twitter: string
     github: string
     linkedin: string
+    url: string
   }
 }
 
