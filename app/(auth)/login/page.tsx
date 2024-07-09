@@ -42,10 +42,10 @@ export default async function Login() {
             Welcome
           </h1>
           <p className="text-sm text-muted-foreground">
-            Use your Google or Github account to sign in.
+            Use your Google account to sign in.
           </p>
           <div className="py-4">
-            <GithubLoginForm />
+            {/* <GithubLoginForm /> */}
             <GoogleLoginForm />
           </div>
         </div>

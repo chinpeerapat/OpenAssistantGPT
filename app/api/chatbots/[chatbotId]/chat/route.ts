@@ -201,16 +201,16 @@ export async function POST(
                             response = message.content[0].image_url.url
                         }
 
-                        await db.message.create({
-                            data: {
-                                chatbotId: params.chatbotId,
-                                userId: chatbot.userId,
-                                message: data.message,
-                                threadId: threadId,
-                                response: response,
-                                from: req.headers.get("origin") || "unknown",
-                            }
-                        })
+                        // await db.message.create({
+                        //     data: {
+                        //         chatbotId: params.chatbotId,
+                        //         userId: chatbot.userId,
+                        //         message: data.message,
+                        //         threadId: threadId,
+                        //         response: response,
+                        //         from: req.headers.get("origin") || "unknown",
+                        //     }
+                        // })
 
                     }
                 } catch (error) {

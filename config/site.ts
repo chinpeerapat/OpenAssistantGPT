@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
     linkedin: "https://www.linkedin.com/in/akhileshrangani/",
     github: "https://github.com/Akhileshrangani4",
     twitter: "https://x.com/heyavi_",
-    url: "https://filmtheory.info/"
+    url: "https://aialexa.org/"
   },
-  url: "https://filmtheory.info/"
+  url: "https://aialexa.org/"
 }
