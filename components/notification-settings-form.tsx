@@ -80,7 +80,7 @@ export function NotificationSettingsForm({ user, inquiryNotificationEnabled, mar
                 onSubmit={form.handleSubmit(onSubmit)}
                 {...props}
             >
-                <Card>
+                {/* <Card>
                     <CardHeader>
                         <CardTitle>Notifications Settings</CardTitle>
                         <CardDescription>
@@ -109,7 +109,7 @@ export function NotificationSettingsForm({ user, inquiryNotificationEnabled, mar
                                 </FormItem>
                             )}
                         />
-                        {/* <FormField
+                        <FormField
                             control={form.control}
                             name="marketingEmailEnabled"
                             render={({ field }) => (
@@ -129,7 +129,7 @@ export function NotificationSettingsForm({ user, inquiryNotificationEnabled, mar
                                     <FormMessage />
                                 </FormItem>
                             )}
-                        /> */}
+                        />
                     </CardContent>
                     <CardFooter>
                         <button
@@ -143,7 +143,7 @@ export function NotificationSettingsForm({ user, inquiryNotificationEnabled, mar
                             <span>Save</span>
                         </button>
                     </CardFooter>
-                </Card>
+                </Card> */}
             </form>
         </Form>
     )

@@ -344,7 +344,7 @@ export function CustomizationSettings({ chatbot }: ChatbotOperationsProps) {
                                     </FormItem>
                                 )}
                             />
-                            {/* <FormField
+                            <FormField
                                 name="chatbotLogo"
                                 render={({ field }) => (
                                     <FormItem className="flex flex-col items-left justify-between rounded-lg border p-4">
@@ -387,7 +387,7 @@ export function CustomizationSettings({ chatbot }: ChatbotOperationsProps) {
                                         </div>
                                     </FormItem>
                                 )}
-                            /> */}
+                            />
                         </div>
                     </div>
                     <button

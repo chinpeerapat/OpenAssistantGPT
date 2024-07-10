@@ -172,7 +172,7 @@ export default async function DashboardPage() {
             <OpenAIForm user={user} />
           </div>
         }
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
@@ -206,7 +206,7 @@ export default async function DashboardPage() {
               <div className="text-2xl font-bold">{files}</div>
             </CardContent>
           </Card>
-          <Card>
+          {/* <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
                 Messages last 30 days
@@ -216,18 +216,18 @@ export default async function DashboardPage() {
             <CardContent>
               <div className="text-2xl font-bold">{messageCountLast30Days}</div>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       </div>
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-        <Card>
+        {/* <Card>
           <CardHeader>
             <CardTitle>Messages per day</CardTitle>
           </CardHeader>
           <CardContent className="pl-2">
             <MessagesOverview items={data} />
           </CardContent>
-        </Card>
+        </Card> */}
         <Card>
           <CardHeader>
             <CardTitle>Recent User Inquiries</CardTitle>
@@ -256,7 +256,7 @@ export default async function DashboardPage() {
             }
           </CardContent>
         </Card>
-      </div>
+      
       <Card>
         <CardHeader>
           <CardTitle>Recent Chatbot Errors</CardTitle>
@@ -285,6 +285,7 @@ export default async function DashboardPage() {
           }
         </CardContent>
       </Card>
+      </div>
     </DashboardShell >
   )
 }

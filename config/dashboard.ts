@@ -29,11 +29,11 @@ export const dashboardConfig: DashboardConfig = {
             href: "/dashboard/files",
             icon: "folder",
         },
-        {
-            title: "Exports",
-            href: "/dashboard/exports",
-            icon: "download",
-        },
+        // {
+        //     title: "Exports",
+        //     href: "/dashboard/exports",
+        //     icon: "download",
+        // },
         // {
         //     title: "Billing",
         //     href: "/dashboard/billing",
