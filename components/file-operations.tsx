@@ -68,10 +68,34 @@ export function FileOperations({ file }: FileOperationsProps) {
                     <span className="sr-only">Download</span>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                    <DropdownMenuItem>
-                        <Link href={file?.blobUrl as Url} className="flex w-full">
-                            Download
-                        </Link>
+                    <DropdownMenuItem
+                        className="flex w-full"
+                        onClick={() => {
+                            if (file?.blobUrl) {
+                                fetch(file.blobUrl)
+                                    .then((response) => response.blob())
+                                    .then((blob) => {
+                                        const url = window.URL.createObjectURL(blob);
+                                        const link = document.createElement('a');
+                                        link.href = url;
+                                        link.download = file.name;
+                                        document.body.appendChild(link);
+                                        link.click();
+                                        link.remove();
+                                        window.URL.revokeObjectURL(url);
+                                    })
+                                    .catch((error) => {
+                                        console.error("Error downloading file:", error);
+                                        toast({
+                                            title: "Download failed.",
+                                            description: "There was an error downloading the file. Please try again.",
+                                            variant: "destructive",
+                                        });
+                                    });
+                            }
+                        }}
+                    >
+                        Download
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem

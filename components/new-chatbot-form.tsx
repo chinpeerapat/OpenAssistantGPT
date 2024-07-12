@@ -219,7 +219,7 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel htmlFor="files">
-                                        Choose your file for retrival
+                                        Choose your file for retrieval
                                     </FormLabel>
                                     <Select
                                         isMulti

@@ -82,8 +82,8 @@ export default async function EmbedOnSitePage({ params }: ChatbotSettingsProps) 
                     <div className="space-y-4">
                         <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
                             <p className="font-bold text-md">Warning</p>
-                            <p className="text-sm">Depending on which platform you are adding our chatbot you may have to change the width and the height of the button. If you see a scroll bar it means the IFRAME is the wrong size and you have to change it.</p>
-                            <p className="text-sm">By default we have `width: 56px; height: 56px;` but if you see the scroll bar try to use `width: 60px; height: 60px;` </p>
+                            <p className="text-sm">Depending on which platform you are adding your chatbot you may have to change the width and the height of the button. If you see a scroll bar it means the IFRAME is the wrong size and you have to change it.</p>
+                            <p className="text-sm">By default I have set the `width: 60px; height: 60px;` but if you see the scroll bar try tweaking based on your needs. </p>
                         </div>
                         <CodeBlock
                             language="html"
@@ -93,7 +93,7 @@ export default async function EmbedOnSitePage({ params }: ChatbotSettingsProps) 
 
 <body>
   <iframe src="${siteConfig.url}embed/${params.chatbotId}/button?chatbox=false"
-    style="z-index: 50; margin-right: 1rem; margin-bottom: 1rem; position: fixed; right: 0; bottom: 0; width: 56px; height: 56px; border: 0; border: 2px solid #e2e8f0; border-radius: 50%; color-scheme: none; background: none;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);"
+    style="z-index: 50; margin-right: 1rem; margin-bottom: 1rem; position: fixed; right: 0; bottom: 0; width: 60px; height: 60px; border: 0; border: 2px solid #e2e8f0; border-radius: 50%; color-scheme: none; background: none;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);"
     id="aialexa-chatbot-button-iframe"></iframe>
   <iframe src="${siteConfig.url}embed/${params.chatbotId}/window?chatbox=false&withExitX=true"
     style="z-index: 50; margin-right: 1rem; margin-bottom: 6rem; display: none; position: fixed; right: 0; bottom: 0; pointer-events: none; overflow: hidden; height: 65vh; border: 2px solid #e2e8f0; border-radius: 0.375rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); width: 30rem;"

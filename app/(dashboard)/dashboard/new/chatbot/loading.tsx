@@ -7,7 +7,7 @@ export default function CreateChatbotLoading() {
         <DashboardShell>
             <DashboardHeader
                 heading="Create your chatbot"
-                text="Create your chatbot and start talking with him."
+                text="Create your chatbot and start talking with it."
             />
             <div className="grid gap-10">
                 <CardSkeleton />

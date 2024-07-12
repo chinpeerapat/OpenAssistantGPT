@@ -23,7 +23,7 @@ export default async function ChatbotCreatePage() {
 
     return (
         <DashboardShell>
-            <DashboardHeader heading="Create your chatbot" text="Create your chatbot and start talking with him.">
+            <DashboardHeader heading="Create your chatbot" text="Create your chatbot and start talking with it.">
                 <Link
                     href="/dashboard"
                     className={cn(

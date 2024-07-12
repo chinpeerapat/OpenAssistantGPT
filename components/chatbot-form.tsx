@@ -200,7 +200,7 @@ export function ChatbotForm({ chatbot, currentFiles, models, files, className, .
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel htmlFor="files">
-                                        Choose your file for retrival
+                                        Choose your file for retrieval
                                     </FormLabel>
                                     <Select
                                         isMulti

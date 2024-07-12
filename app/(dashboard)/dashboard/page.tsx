@@ -156,7 +156,7 @@ export default async function DashboardPage() {
         <ChatbotCreateButton />
       </DashboardHeader>
       <div>
-        {bots === 0 &&
+        {/* {bots === 0 &&
           <div className="mb-4 bg-blue-100 border-l-4 border-blue-500 text-black p-4" role="info">
             <p className="font-bold text-md">Welcome to {siteConfig.name} 🎉</p>
             <p className="text-sm">You are probably new to this platform.</p>
@@ -171,7 +171,7 @@ export default async function DashboardPage() {
           <div className="mb-4">
             <OpenAIForm user={user} />
           </div>
-        }
+        } */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
