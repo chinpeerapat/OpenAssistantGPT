@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Ensure the target div exists
-    var targetDiv = document.getElementById("openassistantgpt-chatbot");
+    var targetDiv = document.getElementById("aialexa-chatbot");
     if (!targetDiv) {
-        console.error("Target div 'openassistantgpt-chatbot' not found.");
+        console.error("Target div 'aialexa-chatbot' not found.");
         return;
     }
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create the iframe element
     var iframe = document.createElement('iframe');
-    iframe.src = `https://openassistantgpt.io/embed/${chatbotId}/window?chatbox=false`;
+    iframe.src = `https://aialexa.org/embed/${chatbotId}/window?chatbox=false`;
     iframe.setAttribute("style", `
     overflow: hidden;
     height: 80vh;

@@ -6,7 +6,8 @@
     "start": "next start",
     "lint": "next lint",
     "email": "email dev --port 3001",
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts",
+    "migrate:dev": "dotenv -e .env.development.local -- npx prisma migrate dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -94,6 +95,7 @@
     "@types/bcrypt": "^5.0.0",
     "@types/node": "^20.14.0",
     "autoprefixer": "^10.4.4",
+    "dotenv-cli": "^7.4.2",
     "eslint": "8.11.0",
     "eslint-config-next": "^14.0.3",
     "postcss": "^8.4.12",

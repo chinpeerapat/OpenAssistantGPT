@@ -34,31 +34,16 @@ export default function WelcomeEmail({ name }: WelcomeEmailProps) {
                         </Heading>
                         <Text className="text-sm">Hello {name},</Text>
                         <Text className="text-sm">
-                            We're excited to have you onboard at <span>{siteConfig.name}</span>. We
-                            hope you enjoy your journey with us. If you have any questions or
-                            need assistance, feel free to reach out.
-                        </Text>
-                        <Text>
-                            You can contact us directly with the email openassistantgpt@gmail.com
+                            Your account has been created on <span>{siteConfig.name}</span>.
                         </Text>
                         <Section className="text-center mt-[32px] mb-[32px]">
                             <Button
                                 className="p-2 bg-[#00A3FF] rounded text-white text-xs font-semibold no-underline text-center"
-                                href={`${siteConfig.url}dashboard/onboarding`}
+                                href={`${siteConfig.url}dashboard/`}
                             >
-                                Get Started
+                                Get Started with your Dashboard
                             </Button>
                         </Section>
-                        <Text className="text-sm">
-                            Cheers,
-                            <br />
-                            The {siteConfig.name} Team
-                        </Text>
-                        <Text className="text-center text-gray-400">
-                            You are subscribed to the marketing emails. To manage your communication preferences, click <Link className="underline text-gray-400" href={`${siteConfig.url}dashboard/settings`}>
-                                here
-                            </Link>
-                        </Text>
                     </Container>
                 </Body>
             </Tailwind>
