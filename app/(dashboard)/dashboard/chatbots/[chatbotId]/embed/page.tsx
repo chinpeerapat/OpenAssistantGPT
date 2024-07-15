@@ -137,6 +137,7 @@ export default function Chatbot() {
             <iframe
                 src="${siteConfig.url}embed/${params.chatbotId}/window?chatbox=false&withExitX=true"
                 style={customStyle}
+                allow="clipboard-read; clipboard-write"
                 className="z-50"
                 id="aialexa-chatbot-iframe"
             ></iframe>
