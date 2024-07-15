@@ -97,7 +97,7 @@ export default async function EmbedOnSitePage({ params }: ChatbotSettingsProps) 
     id="aialexa-chatbot-button-iframe"></iframe>
   <iframe src="${siteConfig.url}embed/${params.chatbotId}/window?chatbox=false&withExitX=true"
     style="z-index: 50; margin-right: 1rem; margin-bottom: 6rem; display: none; position: fixed; right: 0; bottom: 0; pointer-events: none; overflow: hidden; height: 65vh; border: 2px solid #e2e8f0; border-radius: 0.375rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); width: 30rem;"
-    allowfullscreen id="aialexa-chatbot-iframe"></iframe>
+    allowfullscreen allow="clipboard-read; clipboard-write" id="aialexa-chatbot-iframe"></iframe>
 </body>
 `}>
                         </CodeBlock>
