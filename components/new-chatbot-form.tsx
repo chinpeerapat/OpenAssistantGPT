@@ -39,7 +39,7 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
         defaultValues: {
             welcomeMessage: "Hello, how can I help you?",
             prompt: "You are an assistant you help users that visit our website, keep it short, always refer to the documentation provided and never ask for more information.",
-            chatbotErrorMessage: "Oops! An error has occurred. If the issue persists, feel free to reach out to our support team for assistance. We're here to help!"
+            chatbotErrorMessage: "Oops! An error has occurred."
         }
     })
 

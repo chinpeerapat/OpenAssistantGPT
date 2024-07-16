@@ -304,7 +304,7 @@ export function InquirySettings({ chatbot }: ChatbotOperationsProps) {
                                             Display Link After X Chatbot Reply
                                         </FormLabel>
                                         <FormDescription>
-                                            The number of chatbot replies after which the inquiry link will be displayed to the user. We highly to one and the higher the number the lower the number of inquiry you will receive.
+                                            The number of chatbot replies after which the inquiry link will be displayed to the user.
                                         </FormDescription>
                                     </div>
                                     <FormControl>

@@ -62,7 +62,7 @@ export default function InquiryEmail({ ownerName, userEmail, userInquiry, chatbo
                         <Text className="text-sm">
                             Cheers,
                             <br />
-                            The {siteConfig.name} Team
+                            Your {siteConfig.name}
                         </Text>
                         <Text className="text-center text-gray-400">
                             You are subscribed to the emails for Inquiry notifications. To manage your communication preferences, click <Link className="underline text-gray-400" href={`${siteConfig.url}dashboard/settings`}>
