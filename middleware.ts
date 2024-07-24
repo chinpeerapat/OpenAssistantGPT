@@ -10,12 +10,15 @@ export default withAuth(
         const isAuthPage =
             req.nextUrl.pathname.startsWith("/login")
 
+            console.log(`isAuth: ${isAuth}, isAuthPage: ${isAuthPage}, path: ${req.nextUrl.pathname}`)
+
         if (isAuthPage) {
             if (isAuth) {
                 return NextResponse.redirect(new URL("/dashboard", req.url))
             }
 
-            return null
+            console.log("Allowing access to login page")
+            return NextResponse.next()
         }
 
         if (!isAuth) {
@@ -28,6 +31,8 @@ export default withAuth(
                 new URL(`/login?from=${encodeURIComponent(from)}`, req.url)
             );
         }
+        console.log("Allowing access to protected route")
+        return NextResponse.next()
     },
     {
         callbacks: {
