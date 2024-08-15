@@ -38,8 +38,8 @@ module.exports = withSentryConfig(
 
     // Suppresses source map uploading logs during build
     silent: true,
-    org: "marcolivierbouch",
-    project: "openassistantgpt",
+    org: "akhilesh-tutor",
+    project: "aialexa-tutor",
   },
   {
     // For all available options, see:
