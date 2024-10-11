@@ -10,13 +10,12 @@ import { RequiresHigherPlanError } from '@/lib/exceptions';
 import { fileTypes as codeTypes } from '@/lib/validations/codeInterpreter';
 import { fileTypes as searchTypes } from '@/lib/validations/fileSearch';
 
+// Update the configuration
 export const maxDuration = 60;
+export const dynamic = 'force-dynamic';
 
-export const config = {
-    api: {
-      bodyParser: false,
-    },
-  };
+// To replicate bodyParser: false functionality, we don't need to do anything special
+// in the App Router, as it doesn't use body parsing middleware by default
 
 export async function POST(request: NextRequest) {
     try {
@@ -105,5 +104,5 @@ export async function POST(request: NextRequest) {
           return NextResponse.json({ error: "Requires Higher plan" }, { status: 402 });
         }
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
-      }
     }
+}
