@@ -26,7 +26,7 @@ const fontHeading = localFont({
 })
 
 const title = `Build chatbot using OpenAI Assistant - ${siteConfig.name}`;
-const description = "OpenAssistantGPT is an open source platform for building chatbot using OpenAI's assitants.";
+const description = "aialexa is an open source platform for building chatbot using OpenAI's assitants.";
 
 export const metadata: Metadata = {
   title,
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     title,
     description,
   },
-  metadataBase: new URL('https://openassitantgpt.io/'),
+  metadataBase: new URL('https://aialexa.org/'),
   openGraph: {
     title: title,
     description: description,
-    url: new URL('https://openassitantgpt.io/'),
-    siteName: 'OpenAssistantGPT',
+    url: new URL('https://aialexa.org/'),
+    siteName: 'aialexa',
     type: 'website',
   },
 };

@@ -94,6 +94,7 @@
     "zod-form-data": "^2.0.2"
   },
   "devDependencies": {
+    "@sentry/cli": "^2.37.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/aos": "^3.0.7",
     "@types/bcrypt": "^5.0.0",

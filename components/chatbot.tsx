@@ -24,8 +24,8 @@ export default function Chatbot() {
 
     useEffect(() => {
         window.addEventListener('message', function (event) {
-            var iframe = document.getElementById('openassistantgpt-chatbot-iframe');
-            var buttonIframe = document.getElementById('openassistantgpt-chatbot-button-iframe');
+            var iframe = document.getElementById('aialexa-chatbot-iframe');
+            var buttonIframe = document.getElementById('aialexa-chatbot-button-iframe');
 
             if (event.data === 'openChat') {
                 console.log('Toggle chat visibility');
@@ -86,7 +86,7 @@ export default function Chatbot() {
                     {/* <iframe
                         src={`/embed/clxuwsxxs000prbqf2u6g0a12/button?chatbox=false`}
                         scrolling='no'
-                        id="openassistantgpt-chatbot-button-iframe"
+                        id="aialexa-chatbot-button-iframe"
                         className="fixed bottom-0 right-0 mb-4 z-50 flex items-end inline-block mr-4 w-14 h-14 border border-gray-300 rounded-full shadow-md"
                     ></iframe>
                     <iframe
@@ -94,7 +94,7 @@ export default function Chatbot() {
                         style={customStyle}
                         allowFullScreen
                         className='z-50'
-                        id="openassistantgpt-chatbot-iframe"
+                        id="aialexa-chatbot-iframe"
                     ></iframe> */}
                 </>
             )

@@ -20,7 +20,11 @@ const nextConfig = {
         ]
       }
     ]
-  }
+  },
+  sentry: {
+    disableServerWebpackPlugin: true,
+    disableClientWebpackPlugin: true,
+  },
 };
 
 module.exports = nextConfig;
@@ -38,8 +42,8 @@ module.exports = withSentryConfig(
 
     // Suppresses source map uploading logs during build
     silent: true,
-    org: "akhilesh-tutor",
-    project: "aialexa-tutor",
+    org: "aialexa-tutor",
+    project: "aialexa",
   },
   {
     // For all available options, see:
