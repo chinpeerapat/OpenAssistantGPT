@@ -1,16 +1,15 @@
 # AIAlexa
 
-AIAlexa is an advanced AI-powered chatbot platform, built upon the foundation of OpenAssistantGPT. It extends the capabilities of the original project with additional features and improvements tailored for enhanced user experience and functionality.
+AIAlexa is an advanced AI-powered chatbot platform, specifically designed for Professor Alexa Alice Joubin. It extends the capabilities of the original OpenAssistantGPT project with additional features and improvements tailored for enhanced user experience and functionality in an academic setting.
 
 ## Features
 
-- Easy website integration
+- Easy website integration for academic purposes
 - Open-source codebase
 - Minimal coding required for setup
 - Direct billing through OpenAI (no extra charges)
-- User-friendly interface
-- Advanced natural language processing
-- Multi-language support
+- User-friendly interface for students and faculty
+- Advanced natural language processing for academic queries
 
 ## Tech Stack
 
@@ -32,7 +31,7 @@ AIAlexa is an advanced AI-powered chatbot platform, built upon the foundation of
 
 ## Acknowledgements
 
-AIAlexa is built upon the excellent work of the OpenAssistantGPT project. We'd like to acknowledge and thank the original creators and contributors:
+AIAlexa is built upon the excellent work of the OpenAssistantGPT project, customized for Professor Alexa Alice Joubin's specific needs. We'd like to acknowledge and thank the original creators and contributors:
 
 - [OpenAssistantGPT Repository](https://github.com/marcolivierbouch/OpenAssistantGPT)
 - [OpenAssistantGPT Website](https://openassistantgpt.io/)
@@ -43,4 +42,4 @@ AIAlexa is released under the [AGPL-3.0 license](LICENSE).
 
 ## Contact
 
-For support or inquiries, please [open an issue](https://github.com/yourusername/AIAlexa/issues).
+For support or inquiries related to Professor Joubin's implementation, please [open an issue](https://github.com/yourusername/AIAlexa/issues).
