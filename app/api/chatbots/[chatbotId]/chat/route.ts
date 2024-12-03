@@ -11,7 +11,7 @@ import { fileTypes as searchFile } from "@/lib/validations/fileSearch";
 import { File } from "buffer";
 import { getClientIP } from "@/lib/getIP";
 
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 const routeContextSchema = z.object({
     params: z.object({
