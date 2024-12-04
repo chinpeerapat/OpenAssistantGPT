@@ -9,7 +9,7 @@ import { fileTypesFullList } from "@/lib/validations/codeInterpreter";
 import { fileTypes as searchFile } from "@/lib/validations/fileSearch";
 import { getClientIP } from "@/lib/getIP";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 const routeContextSchema = z.object({
     params: z.object({

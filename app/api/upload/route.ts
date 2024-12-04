@@ -10,7 +10,7 @@ import { RequiresHigherPlanError } from '@/lib/exceptions';
 import { fileTypes as codeTypes } from '@/lib/validations/codeInterpreter';
 import { fileTypes as searchTypes } from '@/lib/validations/fileSearch';
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 export async function POST(request: Request) {
     try {
