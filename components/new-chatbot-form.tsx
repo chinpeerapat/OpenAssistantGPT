@@ -33,6 +33,10 @@ interface NewChatbotProps extends React.HTMLAttributes<HTMLElement> {
     user: Pick<User, "id">
 }
 
+interface SelectOption {
+    value: string;
+    label: string;
+}
 
 export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbotProps) {
     const router = useRouter()
@@ -69,6 +73,37 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
         }
         init()
     }, [])
+
+    // Add new effect to update models when API key changes
+    useEffect(() => {
+        const subscription = form.watch(async (value, { name }) => {
+            // Only trigger when openAIKey field changes
+            if (name === 'openAIKey' && value.openAIKey) {
+                try {
+                    const response = await fetch('/api/openai/models', {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ apiKey: value.openAIKey })
+                    });
+                    
+                    if (response.ok) {
+                        const models = await response.json();
+                        setAvailablesModels(models);
+                    } else {
+                        // Clear models if API key is invalid
+                        setAvailablesModels([]);
+                    }
+                } catch (error) {
+                    console.error("Failed to fetch models:", error);
+                    setAvailablesModels([]);
+                }
+            }
+        });
+
+        return () => subscription.unsubscribe();
+    }, [form]);
 
     async function getFiles() {
         const response = await fetch('/api/files', {
@@ -171,7 +206,7 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
                                         Display Name
                                     </FormLabel>
                                     <Input
-                                        onChange={field.onChange}
+                                        {...field}
                                         id="name"
                                     />
                                     <FormDescription>
@@ -190,8 +225,7 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
                                         Welcome message
                                     </FormLabel>
                                     <Input
-                                        onChange={field.onChange}
-                                        value={field.value}
+                                        {...field}
                                         id="welcomemessage"
                                     />
                                     <FormDescription>
@@ -209,8 +243,7 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
                                         Default prompt
                                     </FormLabel >
                                     <Textarea
-                                        onChange={field.onChange}
-                                        value={field.value}
+                                        {...field}
                                         id="prompt"
                                     />
                                     <FormDescription>
@@ -229,49 +262,26 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
                                     <FormLabel htmlFor="files">
                                         Choose your file for retrival
                                     </FormLabel>
-                                    <Select
+                                    <Select<SelectOption, true>
                                         isMulti
                                         closeMenuOnSelect={false}
-                                        onChange={value => field.onChange(value.map((v) => v.value))}
-                                        defaultValue={field.value}
+                                        onChange={value => field.onChange(value.map(v => v.value))}
+                                        value={field.value?.map(id => ({
+                                            value: id,
+                                            label: files.find(f => f.id === id)?.name || id
+                                        }))}
                                         name="files"
                                         id="files"
-                                        options={files.map((file) => ({ value: file.id, label: file.name }))}
+                                        options={files.map((file) => ({
+                                            value: file.id,
+                                            label: file.name
+                                        }))}
                                         className="basic-multi-select"
                                         classNamePrefix="select"
                                     />
-
                                     <FormDescription>
                                         The OpenAI model will use this file to search for specific content.
                                         If you don&apos;t have a file yet, it is because you haven&apos;t published any file.
-                                    </FormDescription>
-                                    <FormMessage />
-                                </FormItem>
-                            )}
-                        />
-                        <FormField
-                            control={form.control}
-                            name="modelId"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel htmlFor="modelId">
-                                        OpenAI Model
-                                    </FormLabel>
-                                    <Select
-                                        onChange={value => field.onChange(value!.value)}
-                                        defaultValue={field.value}
-                                        id="modelId"
-                                        options={
-                                            models.filter((model: ChatbotModel) => availablesModels.includes(model.name)).map((model: ChatbotModel) => (
-                                                { value: model.id, label: model.name }
-                                            ))
-                                        }
-                                        className="basic-multi-select"
-                                        classNamePrefix="select"
-                                    />
-                                    <FormDescription>
-                                        The OpenAI model that will be used to generate responses.
-                                        <b> If you don&apos;t have the gpt-4 option and want to use it. You need to have an OpenAI account at least tier 1.</b>
                                     </FormDescription>
                                     <FormMessage />
                                 </FormItem>
@@ -286,13 +296,47 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
                                         OpenAI API Key
                                     </FormLabel>
                                     <Input
-                                        onChange={field.onChange}
+                                        {...field}
                                         id="openAIKey"
                                         type="password"
                                     />
                                     <FormDescription>
                                         The OpenAI API key that will be used to generate responses.
                                         You can create your API Key <Link target="_blank" className="underline" href='https://platform.openai.com/api-keys'>here</Link>.
+                                    </FormDescription>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="modelId"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel htmlFor="modelId">
+                                        OpenAI Model
+                                    </FormLabel>
+                                    <Select<SelectOption>
+                                        onChange={value => field.onChange(value?.value)}
+                                        value={field.value ? {
+                                            value: field.value,
+                                            label: models.find(m => m.id === field.value)?.name || field.value
+                                        } : null}
+                                        id="modelId"
+                                        options={
+                                            models
+                                                .filter((model: ChatbotModel) => availablesModels.includes(model.name))
+                                                .map((model: ChatbotModel) => ({
+                                                    value: model.id,
+                                                    label: model.name
+                                                }))
+                                        }
+                                        className="basic-multi-select"
+                                        classNamePrefix="select"
+                                    />
+                                    <FormDescription>
+                                        The OpenAI model that will be used to generate responses.
+                                        <b> If you don&apos;t see any models, please enter your OpenAI API key first.</b>
                                     </FormDescription>
                                     <FormMessage />
                                 </FormItem>
@@ -307,8 +351,7 @@ export function NewChatbotForm({ isOnboarding, className, ...props }: NewChatbot
                                         Chatbot Error Message
                                     </FormLabel>
                                     <Textarea
-                                        value={field.value}
-                                        onChange={field.onChange}
+                                        {...field}
                                         id="chatbotErrorMessage"
                                     />
                                     <FormDescription>
