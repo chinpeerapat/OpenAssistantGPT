@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
+const requiredEnv = ['NEXT_PUBLIC_BASE_URL'];  // Add all required env variables here
+
+// Validate Environment Variables at Build Time
+requiredEnv.forEach((env) => {
+  if (!process.env[env]) {
+    throw new Error(`Missing required environment variable: ${env}`);
+  }
+});
+
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
@@ -20,6 +29,9 @@ const nextConfig = {
       },
     ];
   },
+  publicRuntimeConfig: {
+    BASE_URL: process.env.BASE_URL || 'https://fallback-url.com',
+  },
   webpack: (config) => {
     config.devtool = 'hidden-source-map';
     return config;
@@ -34,11 +46,11 @@ module.exports = withSentryConfig(
     org: "workwhales",
     project: "open-gptbuilder",
     silent: !process.env.CI,
-    widenClientFileUpload: false, // Reduced memory usage
+    widenClientFileUpload: false,
     reactComponentAnnotation: { enabled: true },
     tunnelRoute: "/monitoring",
     hideSourceMaps: true,
-    deleteSourceMapsAfterUpload: true, // Prevents memory issues
+    deleteSourceMapsAfterUpload: true,
     disableLogger: true,
     automaticVercelMonitors: true,
   }
